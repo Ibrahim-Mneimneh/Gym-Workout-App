@@ -1,7 +1,8 @@
 # Gym Workout App
 Welcome to the Gym Workout App! This app is designed to help you keep track of your workouts and progress towards your fitness goals.
 
-Installation
+
+## Installation
 To install the app, follow these steps:
 
 Clone the repository to your local machine.
@@ -12,13 +13,12 @@ In the .env file, set the DB_URI variable to the URI of your MongoDB database.
 Set the SECRET variable to a string that you want to use to hash your passwords.
 Here's an example of what your .env file should look like:
 
-php
 Copy code
 DB_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority
 SECRET=mysecretpassword
 Be sure to replace <username>, <password>, <cluster>, and <dbname> with the appropriate values for your MongoDB database.
 
-Usage
+## Usage
 To start the app, follow these steps:
 
 Open your terminal and navigate to the root directory of the project.
