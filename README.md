@@ -1,4 +1,4 @@
-#Gym Workout App
+# Gym Workout App
 Welcome to the Gym Workout App! This app is designed to help you keep track of your workouts and progress towards your fitness goals.
 
 Installation
