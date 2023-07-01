@@ -9,21 +9,21 @@ function App() {
   const { user } = useAuthContext();
   return (
     <div className="App">
-      <BrowserRouter basename="https://workout-app-l7ae">
+      <BrowserRouter basename="https://workout-app-l7ae.onrender.com/">
         <Navbar />
         <div className="pages">
           <Routes>
             <Route
               path="/"
-              element={user ? <Home /> : <Navigate to="./login" />}
+              element={user ? <Home /> : <Navigate to="/login" />}
             />
             <Route
               path="/login"
-              element={!user ? <Login /> : <Navigate to="./" />}
+              element={!user ? <Login /> : <Navigate to="/" />}
             />
             <Route
               path="/signup"
-              element={!user ? <Signup /> : <Navigate to="./" />}
+              element={!user ? <Signup /> : <Navigate to="/" />}
             />
           </Routes>
         </div>
