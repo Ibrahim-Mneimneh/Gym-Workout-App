@@ -11,12 +11,16 @@ const WorkoutDetails = ({ workout }) => {
       return;
     }
 
-    const response = await fetch("/api/workouts/" + workout._id, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      "https://gym-workout-app-api.onrender.com:4000/api/workouts/" +
+        workout._id,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
+    );
     const json = await response.json();
 
     if (response.ok) {

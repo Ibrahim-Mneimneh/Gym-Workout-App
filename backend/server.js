@@ -1,11 +1,10 @@
-require("dotenv").config({
-  path: "C:UsersIbrahim MneimnehDesktopMy FolderGitHubMERN Stack\backend.env",
-});
 const mongoose = require("mongoose");
 const express = require("express");
 const workoutRoutes = require("./routes/workout");
 const userRoutes = require("./routes/user");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 // To set the
 app.use(express.json());
 
@@ -17,16 +16,14 @@ app.use((req, res, next) => {
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
 mongoose
-  .connect(
-    "mongodb+srv://Ib99s1:test@tutorial.lceackk.mongodb.net/MERN_Stack_Workout_App"
-  )
+  .connect(process.env.dbURI)
   .then(() => {
     console.log("Successfully Connected to Database!");
   })
-  .catch((error) => {
-    console.log(error);
+  .catch((err) => {
+    console.log(err);
   });
 
-app.listen(process.env.PORT || 4000, () => {
-  console.log("Listening on port 4000");
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Listening on port" + process.env.PORT);
 });
