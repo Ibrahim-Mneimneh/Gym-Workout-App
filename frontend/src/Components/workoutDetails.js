@@ -12,8 +12,7 @@ const WorkoutDetails = ({ workout }) => {
     }
 
     const response = await fetch(
-      "https://gym-workout-app-api.onrender.com:4000/api/workouts/" +
-        workout._id,
+      "https://gym-workout-app-api.onrender.com/api/workouts/" + workout._id,
       {
         method: "DELETE",
         headers: {
