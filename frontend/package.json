@@ -2,8 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://gym-workout-app-api.onrender.com:4000",
-  "homepage": "https://workout-app-l7ae.onrender.com/",
+  "homepage": "https://workout-app-l7ae.onrender.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

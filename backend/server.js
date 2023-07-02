@@ -12,7 +12,11 @@ app.use((req, res, next) => {
   console.log(req.path);
   next();
 });
-
+app.use(
+  cors({
+    origin: "http://192.168.0.108:3000",
+  })
+);
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
 mongoose
