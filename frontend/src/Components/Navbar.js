@@ -8,7 +8,7 @@ const Navbar = () => {
     <header>
       <div className="container">
         <Link to="/">
-          <h1>Workout Body</h1>
+          <h1>Workout Buddy</h1>
         </Link>
         <nav>
           {user && (
@@ -19,9 +19,13 @@ const Navbar = () => {
           )}
 
           {!user && (
-            <div>
-              <Link to="/Signup">Signup </Link>
-              <Link to="/Login">Login</Link>
+            <div className="navigate">
+              <Link className="navigate-link" to="/Signup">
+                Signup
+              </Link>
+              <Link className="navigate-link" to="/Login">
+                Login
+              </Link>
             </div>
           )}
         </nav>
