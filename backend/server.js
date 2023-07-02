@@ -4,6 +4,7 @@ const workoutRoutes = require("./routes/workout");
 const userRoutes = require("./routes/user");
 const app = express();
 const dotenv = require("dotenv");
+const cors = require("cors");
 dotenv.config();
 // To set the
 app.use(express.json());

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "proxy":"https://gym-workout-app-api.onrender.com/",
+  "proxy": "https://gym-workout-app-api.onrender.com/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -14,6 +14,7 @@
   "dependencies": {
     "bcrypt": "^5.1.0",
     "config": "^3.3.9",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "env-cmd": "^10.1.0",
     "express": "^4.18.2",
