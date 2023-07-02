@@ -22,9 +22,10 @@ function App() {
               element={!user ? <Signup /> : <Navigate to="/" />}
             />
             <Route
-              path={"/login" || "/Login"}
+              path="/login"
               element={!user ? <Login /> : <Navigate to="/" />}
             />
+            <Route path="*" element={!user ? <Login /> : <Navigate to="/" />} />
           </Routes>
         </div>
       </BrowserRouter>
