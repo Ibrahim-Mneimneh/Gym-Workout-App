@@ -13,11 +13,23 @@ app.use((req, res, next) => {
   console.log(req.path);
   next();
 });
-app.use(
-  cors({
-    origin: "https://workout-app-l7ae.onrender.com/",
-  })
-);
+const allowedOrigins = [
+  "https://gym-workout-app-api.onrender.com",
+  "https://gym-workout-app-api.onrender.com/login",
+  "https://gym-workout-app-api.onrender.com/signup",
+];
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Check if the request's origin is in the allowed origins list
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
 mongoose
