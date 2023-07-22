@@ -17,19 +17,27 @@ const allowedOrigins = [
   "https://gym-workout-app-api.onrender.com",
   "https://gym-workout-app-api.onrender.com/login",
   "https://gym-workout-app-api.onrender.com/signup",
+  "http://localhost:3000/",
 ];
+
+// Set up CORS options
 const corsOptions = {
   origin: function (origin, callback) {
-    // Check if the request's origin is in the allowed origins list
-    if (allowedOrigins.includes(origin) || !origin) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      // Allow requests with no origin (like Postman, CURL, etc.)
+      // and requests from the allowed origins
       callback(null, true);
     } else {
+      // Reject requests from unauthorized origins
       callback(new Error("Not allowed by CORS"));
     }
   },
   optionsSuccessStatus: 200,
 };
+
+// Enable CORS for all routes
 app.use(cors(corsOptions));
+
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
 mongoose
