@@ -9,7 +9,7 @@ function App() {
   const { user } = useAuthContext();
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/Gym-Workout-App">
         <Navbar />
         <div className="pages">
           <Routes>

@@ -158,3 +158,6 @@ form.login {
   background: #fff;
   border-radius: 4px;
 }
+.navigate-link:hover {
+  filter: contrast(200%);
+}
