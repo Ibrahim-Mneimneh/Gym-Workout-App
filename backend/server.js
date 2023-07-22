@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 // Set up CORS options to allow requests from your frontend domain
 const corsOptions = {
-  origin: "https://workout-app-l7ae.onrender.com:3000",
+  origin: "https://workout-app-l7ae.onrender.com",
   optionsSuccessStatus: 200,
 };
 
