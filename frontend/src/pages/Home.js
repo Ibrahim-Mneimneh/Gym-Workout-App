@@ -17,7 +17,7 @@ const Home = () => {
         }
       );
       const json = await response.json();
-
+      
       if (response.ok) {
         dispatch({ type: "SET_WORKOUTS", payload: json });
       }
