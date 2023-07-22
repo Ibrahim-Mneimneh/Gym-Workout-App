@@ -14,13 +14,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// Set up CORS options to allow requests from your frontend domain
 const corsOptions = {
   origin: "https://workout-app-l7ae.onrender.com",
   optionsSuccessStatus: 200,
 };
 
-// Enable CORS for all routes
 app.use(cors(corsOptions));
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
