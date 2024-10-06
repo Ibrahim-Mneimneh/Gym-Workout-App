@@ -31,6 +31,6 @@ mongoose
     console.log(err);
   });
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 6000, () => {
   console.log("Listening on port" + process.env.PORT);
 });
